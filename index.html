@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Уютный дом — хостел</title>
+  <meta name="description" content="Уютный дом — хостел. Wi-Fi, парковка, горячая вода, чистое бельё. Стоимость от 600 ₽." />
+
+  <style>
+    :root{
+      --bg:#f8f8f8;
+      --card:#ffffff;
+      --accent:#d32f2f;
+      --text:#222;
+      --muted:#666;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+
+    .site-header{
+      background:var(--card);
+      padding:16px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      align-items:flex-start;
+      border-bottom:1px solid #e6e6e6;
+    }
+    .lang a{
+      margin-right:10px;
+      text-decoration:none;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .logo{
+      font-weight:700;
+      font-size:20px;
+    }
+    .site-title{
+      margin:0;
+      font-size:28px;
+    }
+
+    .container{
+      max-width:980px;
+      margin:24px auto;
+      padding:0 16px;
+    }
+
+    .about, .gallery, .map, .contacts{
+      background:var(--card);
+      padding:16px;
+      margin-bottom:16px;
+      border-radius:8px;
+      border:1px solid #eee;
+    }
+
+    .price{margin-top:8px}
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      border-radius:6px;
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+    .gallery-grid figure{
+      margin:0;
+      background:#fafafa;
+      padding:8px;
+      border-radius:6px;
+      text-align:center;
+      border:1px solid #f0f0f0;
+    }
+    .gallery-grid img{
+      max-width:100%;
+      height:120px;
+      object-fit:cover;
+      border-radius:4px;
+      display:block;
+      margin:0 auto 8px;
+    }
+    .gallery-grid figcaption{
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .site-footer{
+      text-align:center;
+      color:var(--muted);
+      padding:18px 8px;
+    }
+
+    @media (min-width:900px){
+      .site-header{flex-direction:row; justify-content:space-between; align-items:center}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="lang">
+      <a href="#">Рус</a>
+      <a href="#">Oʻz</a>
+      <a href="#">Тоҷ</a>
+      <a href="#">Кыр</a>
+    </div>
+    <div class="logo">УД</div>
+    <h1 class="site-title">Уютный дом</h1>
+  </header>
+
+  <main class="container">
+    <section class="about">
+      <h2>О нашем хостеле</h2>
+      <p>
+        В хостеле есть Wi-Fi, парковка, горячая вода, чистое бельё, регулярная уборка,
+        большая территория и доброжелательный персонал.
+      </p>
+      <p class="price">Стоимость проживания — <strong>от 600 рублей в сутки</strong></p>
+      <p><a class="btn" href="https://wa.me/79911365154" target="_blank" rel="noopener">Забронировать</a></p>
+    </section>
+
+    <section class="gallery">
+      <h2>Фотогалерея</h2>
+      <div class="gallery-grid">
+        <figure>
+          <img src="https://placehold.co/400x250?text=Фото+1" alt="Здание" />
+          <figcaption>1. Здание</figcaption>
+        </figure>
+        <figure>
+          <img src="https://placehold.co/400x250?text=Фото+2" alt="Комнаты" />
+          <figcaption>2. Комнаты</figcaption>
+        </figure>
+        <figure>
+          <img src="https://placehold.co/400x250?text=Фото+3" alt="Коридор" />
+          <figcaption>3. Коридор</figcaption>
+        </figure>
+        <figure>
+          <img src="https://placehold.co/400x250?text=Фото+4" alt="Лестницы" />
+          <figcaption>4. Лестницы</figcaption>
+        </figure>
+        <figure>
+          <img src="https://placehold.co/400x250?text=Фото+5" alt="Кухня" />
+          <figcaption>5. Кухня</figcaption>
+        </figure>
+        <figure>
+          <img src="https://placehold.co/400x250?text=Фото+6" alt="Беседка" />
+          <figcaption>6. Беседка</figcaption>
+        </figure>
+        <figure>
+          <img src="https://placehold.co/400x250?text=Фото+7" alt="Парковка" />
+          <figcaption>7. Парковка</figcaption>
+        </figure>
+        <figure>
+          <img src="https://placehold.co/400x250?text=Фото+8" alt="Двор" />
+          <figcaption>8. Двор</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="map">
+      <h2>Мы на карте</h2>
+      <p><a href="https://yandex.ru/maps/?text=12-я%20Парковая%20ул.,%204%20Москва" target="_blank" rel="noopener">Открыть в Яндекс.Картах</a></p>
+      <address>12-я Парковая ул., 4, Москва</address>
+    </section>
+
+    <section class="contacts">
+      <h2>Контакты</h2>
+      <p class="phone">📞 +7 991 136-51-54</p>
+      <p><a href="https://wa.me/79911365154" target="_blank" rel="noopener">Написать в WhatsApp</a></p>
+      <p>✉️ <a href="mailto:natasha.colomoets@yandex.ru">natasha.colomoets@yandex.ru</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Уютный дом — Все права защищены</p>
+  </footer>
+</body>
+</html>
