@@ -1,1 +1,0 @@
-# uyutnydom.github.io
