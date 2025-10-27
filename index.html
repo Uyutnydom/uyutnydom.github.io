@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Уютный Дом — Хостел</title>
+<meta name="description" content="Хостел Уютный Дом: частная территория, беседка, Wi-Fi, удобства.">
+<style>
+:root {
+  --bg:#fffbf9; --card:#fffefc; --fg:#4b3b35;
+  --accent:#f6a07a; --accent-light:#ffe7db; --muted:#7b6e68;
+  font-family:"Poppins","Nunito","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+body {margin:0;background:var(--bg);color:var(--fg);line-height:1.6;}
+header {
+  position:relative;text-align:center;padding:28px 16px 36px;
+  background:linear-gradient(180deg,#fff8f4,#fff0e8);
+  box-shadow:0 4px 18px rgba(0,0,0,0.06);
+}
+.logo {
+  display:inline-block;background:var(--accent);color:#fff;
+  padding:12px 14px;border-radius:50%;font-weight:700;font-size:20px;
+  box-shadow:0 6px 18px rgba(246,160,122,0.15);
+}
+h1 {margin:6px 0 12px;font-size:28px;font-weight:800;}
+.lang-switch {position:absolute;top:12px;right:16px;display:flex;gap:8px;}
+.lang-btn {
+  background:rgba(255,255,255,0.85);border:1px solid var(--accent-light);
+  border-radius:20px;padding:6px 10px;cursor:pointer;font-size:13px;
+  transition:all .2s ease;box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+.lang-btn.active,.lang-btn:hover {
+  background:var(--accent);color:#fff;border-color:var(--accent);
+}
+.book-btn {
+  display:inline-block;background:var(--accent);color:#fff;
+  text-decoration:none;padding:12px 28px;border-radius:30px;
+  box-shadow:0 6px 20px rgba(246,160,122,0.18);
+  font-weight:700;font-size:16px;transition:all .2s;
+}
+.book-btn:hover {background:#f08357;}
+main.container {max-width:980px;margin:0 auto;padding:18px;}
+section {
+  margin:28px 0;background:var(--card);padding:22px;
+  border-radius:14px;box-shadow:0 4px 14px rgba(0,0,0,0.04);
+}
+h2 {margin-top:0;color:var(--accent);}
+.gallery-grid {
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;
+}
+.gallery-item {
+  border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#fff,#fffdfc);
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+.gallery-item img {width:100%;height:220px;object-fit:cover;}
+.caption {text-align:center;font-weight:600;color:var(--muted);padding:10px;}
+.map-wrap {border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,0.05);}
+.contacts {display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+.contact-card {
+  background:#fff;padding:10px 14px;border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.04);
+}
+.contact-card a {text-decoration:none;color:var(--fg);font-weight:700;}
+footer {text-align:center;padding:18px;color:var(--muted);font-size:14px;}
+</style>
+</head>
+<body>
+<header>
+  <div class="lang-switch">
+    <button class="lang-btn active" data-lang="ru">Рус</button>
+    <button class="lang-btn" data-lang="uz">Oʻz</button>
+    <button class="lang-btn" data-lang="tg">Тоҷ</button>
+    <button class="lang-btn" data-lang="kg">Кыр</button>
+  </div>
+  <div class="logo">УД</div>
+  <h1 data-i18n="site_title">Уютный Дом</h1>
+  <a href="https://wa.me/79911365154?text=Здравствуйте,%20хочу%20забронировать%20через%20сайт" 
+     target="_blank" class="book-btn" id="book-btn" data-i18n="book">Забронировать</a>
+</header>
+
+<main class="container">
+  <section id="about">
+    <h2 data-i18n="about_title">О нашем хостеле</h2>
+    <p class="lead" data-i18n="about_text">
+      В хостеле есть высокоскоростной Wi-Fi, парковка, горячая вода, чистое бельё,
+      регулярная уборка и доброжелательный персонал, а также большая территория, 
+      на которой можно гулять и отдыхать.
+    </p>
+    <p style="margin-top:8px;font-weight:700;color:#f6a07a;" data-i18n="price_text">
+      💰 Стоимость проживания — от 600 рублей в сутки
+    </p>
+  </section>
+
+  <section id="gallery">
+    <h2 data-i18n="gallery_title">Фотогалерея</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="img1.jpg"><div class="caption" data-i18n="cap1">1. Здание</div></div>
+      <div class="gallery-item"><img src="img2.jpg"><div class="caption" data-i18n="cap2">2. Комнаты</div></div>
+      <div class="gallery-item"><img src="img3.jpg"><div class="caption" data-i18n="cap3">3. Коридор</div></div>
+      <div class="gallery-item"><img src="img4.jpg"><div class="caption" data-i18n="cap4">4. Лестницы</div></div>
+      <div class="gallery-item"><img src="img5.jpg"><div class="caption" data-i18n="cap5">5. Кухня</div></div>
+      <div class="gallery-item"><img src="img6.jpg"><div class="caption" data-i18n="cap6">6. Беседка</div></div>
+      <div class="gallery-item"><img src="img7.jpg"><div class="caption" data-i18n="cap7">7. Парковка</div></div>
+      <div class="gallery-item"><img src="img8.jpg"><div class="caption" data-i18n="cap8">8. Двор</div></div>
+    </div>
+  </section>
+
+  <section id="map">
+    <h2 data-i18n="map_title">Мы на карте</h2>
+    <div class="map-wrap">
+      <iframe src="https://yandex.ru/map-widget/v1/?ll=37.811027%2C55.789699&z=17&pt=37.811027,55.789699,pm2rdl"
+        width="100%" height="300" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p><a href="https://yandex.ru/maps?text=55.789699,37.811027" target="_blank" data-i18n="open_in_yandex">
+      Открыть в Яндекс.Картах</a></p>
+    <p class="address" data-i18n="address_text">12-я Парковая ул., 4, Москва</p>
+  </section>
+
+  <section id="contacts">
+    <h2 data-i18n="contacts_title">Контакты</h2>
+    <div class="contacts">
+      <div class="contact-card">📍 <span data-i18n="address_text_small">12-я Парковая ул., 4, Москва</span></div>
+      <div class="contact-card">📞 <a href="tel:+79911365154">+7 991 136-51-54</a></div>
+      <div class="contact-card">💬 <a href="https://wa.me/79911365154?text=Здравствуйте,%20хочу%20забронировать%20через%20сайт" target="_blank" data-i18n="whatsapp">WhatsApp</a></div>
+      <div class="contact-card">✉️ <a href="mailto:natasha.colomoets@yandex.ru">natasha.colomoets@yandex.ru</a></div>
+    </div>
+  </section>
+</main>
+
+<footer><span data-i18n="footer">© Уютный Дом — Все права защищены</span></footer>
+
+<script>
+const translations = {
+ ru:{site_title:"Уютный Дом",about_title:"О нашем хостеле",
+  about_text:"В хостеле есть высокоскоростной Wi-Fi, парковка, горячая вода, чистое бельё, регулярная уборка и доброжелательный персонал, а также большая территория, на которой можно гулять и отдыхать.",
+  price_text:"💰 Стоимость проживания — от 600 рублей в сутки",
+  gallery_title:"Фотогалерея",map_title:"Мы на карте",open_in_yandex:"Открыть в Яндекс.Картах",
+  address_text:"12-я Парковая ул., 4, Москва",contacts_title:"Контакты",whatsapp:"WhatsApp",
+  footer:"© Уютный Дом — Все права защищены",book:"Забронировать",
+  cap1:"1. Здание",cap2:"2. Комнаты",cap3:"3. Коридор",cap4:"4. Лестницы",cap5:"5. Кухня",cap6:"6. Беседка",cap7:"7. Парковка",cap8:"8. Двор"},
+ uz:{site_title:"Уютный Дом",about_title:"Хостел ҳақида",
+  about_text:"Хостелда тезкор Wi-Fi, машина қўйиш жойи, иссиқ сув, тоза ёстиқлар, мунтазам тозалаш ва меҳрибон персонал мавжуд.",
+  price_text:"💰 Narx — sutkasiga 600 rublʼdan boshlab",gallery_title:"Fotogalereya",
+  map_title:"Xaritada",open_in_yandex:"Yandex Xaritada ochish",
+  address_text:"12-ya Parkovaya ko'chasi, 4, Moskva",contacts_title:"Kontaktlar",whatsapp:"WhatsApp",
+  footer:"© Uyutny Dom — Barcha huquqlar himoyalangan",book:"Band qilish",
+  cap1:"1. Bino",cap2:"2. Xonalar",cap3:"3. Koridor",cap4:"4. Zinapoyalar",cap5:"5. Oshxona",cap6:"6. Beshdtka",cap7:"7. Avtoparkovka",cap8:"8. Hovli"},
+ tg:{site_title:"Уютный Дом",about_title:"Дар бораи хостел",
+  about_text:"Дар хостел Wi-Fi-и баландсуръат, таваққуфгоҳ, оби гарм, либоси тоза ва кормандони меҳрубон мавҷуданд.",
+  price_text:"💰 Нархи иҷора — аз 600 рубл дар як шабонарӯз",
+  gallery_title:"Галерея",map_title:"Мо дар харита",open_in_yandex:"Дар Yandex Maps боз кардани",
+  address_text:"12-я Parkovaya кӯча, 4, Маскав",contacts_title:"Тамосҳо",whatsapp:"WhatsApp",
+  footer:"© Uyutny Dom — Ҳама ҳуқуқҳо ҳифз карда шудаанд",book:"Брон кардан",
+  cap1:"1. Бино",cap2:"2. Ҳона",cap3:"3. Коридор",cap4:"4. Зинапояҳо",cap5:"5. Ошхона",cap6:"6. Беседка",cap7:"7. Паркинг",cap8:"8. Ҳавлӣ"},
+ kg:{site_title:"Уютный Дом",about_title:"Хостел жөнүндө",
+  about_text:"Хостелде жогорку ылдамдыктагы Wi-Fi, авто токтотуу, ысык суу, таза төшөк, тазалоо жана жылуу кызматкерлер бар.",
+  price_text:"💰 Баасы — суткасына 600 рублдан баштап",gallery_title:"Сүрөттөр",
+  map_title:"Биз картада",open_in_yandex:"Yandex Карталардан ачуу",
+  address_text:"12-я Парковая көч., 4, Москва",contacts_title:"Байланыштар",whatsapp:"WhatsApp",
+  footer:"© Uyutny Dom — Бардык укуктар корголгон",book:"Брондоо",
+  cap1:"1. Имарат",cap2:"2. Бөлмөлөр",cap3:"3. Далба",cap4:"4. Баскычтар",cap5:"5. Ашкана",cap6:"6. Беседка",cap7:"7. Автостоянка",cap8:"8. Двор"}
+};
+
+function setLang(l){
+ document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+ document.querySelectorAll('[data-i18n]').forEach(el=>{
+   const k=el.dataset.i18n;
+   if(translations[l]&&translations[l][k])el.textContent=translations[l][k];
+ });
+ const btn=document.getElementById('book-btn');
+ if(btn&&translations[l].book)btn.textContent=translations[l].book;
+ localStorage.setItem('lang',l);document.documentElement.lang=l;
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ const saved=localStorage.getItem('lang')||'ru';
+ setLang(saved);
+ document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+});
+</script>
+</body>
+</html>
